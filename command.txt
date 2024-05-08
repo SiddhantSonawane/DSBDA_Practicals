@@ -1,0 +1,9 @@
+mount -t vboxsf folder_name(givenin shared folders opt) (path)
+
+
+create file and write content: 		cat > /home/cloudera/file.txt
+create input folder: 			hdfs dfs -mkdir /ipfolder
+put the file into ipfolder: 		hdfs dfs -put /home/cloudera/file.txt /ipfolder
+jar file cmd: 				hadoop jar /home/cloudera/WordCount.jar wordCountPackage.WordCount /ipfolder/file.txt /out1
+see output:  				hdfs dfs -cat /out1/part-r-00000
+
